@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/configuration-editing/schemas/devContainer.vscode.schema.json",
+  "name": "sample",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "dockerComposeFile": "docker-compose.yaml",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "chat.agent.enabled": false,
+        "chat.disableAIFeatures": true,
+        "textlint.autoFixOnSave": true,
+        "textlint.nodePath": "/usr/local/lib/node_modules",
+        "textlint.configPath": "${workspaceFolder}/.textlintrc.json"
+      },
+      "extensions": [
+        "MS-CEINTL.vscode-language-pack-ja",
+        "streetsidesoftware.code-spell-checker",
+        "username.errorlens",
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+        "3w36zj6.textlint",
+        "zenn.zenn-preview"
+      ]
+    }
+  }
+}

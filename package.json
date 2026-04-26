@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "lint": "textlint --fix --ext .md",
+    "lint:check": "textlint --ext .md",
+    "new:article": "zenn new:article",
+    "new:book": "zenn new:book",
+    "preview": "zenn preview",
+    "preview:watch": "zenn preview --watch"
+
+  },
+  "dependencies": {
+    "textlint-rule-ja-no-mixed-period": "^3.0.2",
+    "textlint-rule-no-doubled-joshi": "^5.1.1",
+    "textlint-rule-no-dropping-the-ra": "^3.0.0",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0"
+  }
+}
