@@ -7,7 +7,12 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "github.copilot.enable": {
+          "*": false
+        },
+        "chat.disableAIFeatures": true
       },
       "extensions": [
         "MS-CEINTL.vscode-language-pack-ja",
