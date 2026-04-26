@@ -2,6 +2,9 @@
   "plugins": {
     "@textlint/markdown": true
   },
+  "filters": {
+    "comments": true
+  },
   "rules": {
     "preset-ja-technical-writing": {
       "ja-no-weak-phrase": false,
@@ -18,9 +21,6 @@
     "no-doubled-joshi": {
       "min_interval": 1
     },
-    "spellcheck-tech-word": true,
-    "filters": {
-      "comments": true
-    }
+    "spellcheck-tech-word": true
   }
 }

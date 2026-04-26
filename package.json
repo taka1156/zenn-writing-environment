@@ -1,8 +1,8 @@
 {
   "name": "zenn-writing-environment",
   "scripts": {
-    "lint": "textlint ./articles/*.md",
-    "lint:fix": "textlint --fix ./articles/*.md",
+    "lint": "textlint ./articles/**/*.md",
+    "lint:fix": "textlint --fix ./articles/**/*.md",
     "new:article": "zenn new:article",
     "new:book": "zenn new:book",
     "pv": "zenn preview"
@@ -10,7 +10,8 @@
   "devDependencies": {
     "@textlint/textlint-plugin-markdown": "^15.5.4",
     "markdownlint-cli": "^0.48.0",
-    "textlint": "^15.5.4",
+    "textlint": "^15.6.0",
+    "textlint-filter-rule-comments": "^1.3.0",
     "textlint-rule-ja-no-mixed-period": "^3.0.2",
     "textlint-rule-no-doubled-joshi": "^5.1.1",
     "textlint-rule-no-dropping-the-ra": "^3.0.0",
