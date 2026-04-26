@@ -41,15 +41,6 @@ git config --system --add safe.directory /workspace
 echo 'export PS1="\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;31m\]\$(__git_ps1 \"(%s)\") \\n+\[\033[01;34m\]\\$ \[\033[00m\]"' >> ~/.bashrc
 EOF
 
-RUN yarn global add zenn-cli \
-        markdownlint-cli \
-        markdownlint \
-        @textlint/textlint-plugin-markdown \
-        textlint \
-        textlint-rule-preset-ja-technical-writing \
-        textlint-rule-ja-no-mixed-period \
-        textlint-rule-no-dropping-the-ra \
-        textlint-rule-no-doubled-joshi \
-        textlint-rule-spellcheck-tech-word
+RUN yarn global add zenn-cli
 
 CMD ["bash"]
