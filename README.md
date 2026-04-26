@@ -1,1 +1,1 @@
-# codespace-template
+# Zenn Writing Environment
