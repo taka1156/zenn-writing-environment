@@ -14,13 +14,12 @@
       "ja-no-weak-phrase": false,
       "ja-no-redundant-expression": true,
       "no-exclamation-question-mark": false,
+      "no-doubled-joshi": {
+        "min_interval": 2
+      },
       "sentence-length": {
         "max": 100
       }
-    },
-    "no-dropping-the-ra": true,
-    "no-doubled-joshi": {
-      "min_interval": 2
     },
     "spellcheck-tech-word": true
   }
