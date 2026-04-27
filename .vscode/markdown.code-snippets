@@ -1,0 +1,29 @@
+{
+    "zenn warning": {
+        "prefix": "warning",
+        "body": [
+            ":::message $1",
+            "$2",
+            ":::"
+        ],
+        "description": "Zenn extentds snippet for warning"
+    },
+    "zenn alert": {
+        "prefix": "alert",
+        "body": [
+            ":::message alert $1",
+            "$2",
+            ":::"
+        ],
+        "description": "Zenn extentds snippet for alert"
+    },
+    "zenn details": {
+        "prefix": "details",
+        "body": [
+            ":::details $1",
+            "$2",
+            ":::"
+        ],
+        "description": "zenn extentds snippet for details "
+    },
+}

@@ -4,6 +4,7 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yaml",
+  "postCreateCommand": "yarn install",
   "customizations": {
     "vscode": {
       "settings": {
@@ -12,7 +13,14 @@
         "github.copilot.enable": {
           "*": false
         },
-        "chat.disableAIFeatures": true
+        "chat.disableAIFeatures": true,
+        "[markdown]": {
+          "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "off"
+          }
+        }
       },
       "extensions": [
         "MS-CEINTL.vscode-language-pack-ja",
