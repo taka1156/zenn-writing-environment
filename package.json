@@ -2,10 +2,10 @@
   "name": "zenn-writing-environment",
   "scripts": {
     "prepare": "husky",
-    "lint": "textlint ./articles/**/*.md",
-    "lint:fix": "textlint --fix ./articles/**/*.md",
-    "new:article": "zenn new:article",
-    "new:book": "zenn new:book",
+    "tl": "textlint ./articles/**/*.md",
+    "tlf": "textlint --fix ./articles/**/*.md",
+    "na": "zenn new:article",
+    "nb": "zenn new:book",
     "pv": "zenn preview"
   },
   "devDependencies": {
