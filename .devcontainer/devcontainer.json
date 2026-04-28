@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/configuration-editing/schemas/devContainer.vscode.schema.json",
   "name": "zenn-writing-environment",
-  "service": "app",
+  "service": "study_room",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yaml",
   "postCreateCommand": "yarn install",
