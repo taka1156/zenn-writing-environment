@@ -5,6 +5,7 @@
     "tl": "textlint ./articles/**/*.md",
     "tlf": "textlint --fix ./articles/**/*.md",
     "na": "zenn new:article",
+    "cta":"scripts/copy-template.sh",
     "nb": "zenn new:book",
     "pv": "zenn preview"
   },
