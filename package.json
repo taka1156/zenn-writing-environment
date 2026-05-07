@@ -4,8 +4,7 @@
     "prepare": "husky",
     "tl": "textlint ./articles/**/*.md",
     "tlf": "textlint --fix ./articles/**/*.md",
-    "na": "zenn new:article",
-    "cta":"scripts/copy-template.sh",
+    "na": "node scripts/customNewZennArticle.mjs",
     "nb": "zenn new:book",
     "pv": "zenn preview"
   },
