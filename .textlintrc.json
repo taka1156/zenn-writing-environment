@@ -11,11 +11,20 @@
       "no-mix-dearu-desumasu": {
         "prefer": "desumasu"
       },
+      "max-kanji-continuous-len": {
+        "allow": [
+          "自己署名証明書"
+        ]
+      },
       "ja-no-weak-phrase": false,
       "ja-no-redundant-expression": true,
       "no-exclamation-question-mark": false,
       "no-doubled-joshi": {
-        "min_interval": 2
+        "allow": [
+          "で",
+          "に",
+          "へ"
+        ]
       },
       "sentence-length": {
         "max": 100
