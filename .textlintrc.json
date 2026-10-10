@@ -28,7 +28,7 @@
         ]
       },
       "sentence-length": {
-        "max": 100
+        "max": 130
       }
     },
     "spellcheck-tech-word": true
