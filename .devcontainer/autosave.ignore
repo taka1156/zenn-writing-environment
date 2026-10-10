@@ -1,0 +1,332 @@
+# =============================================================================
+# autosave.ignore
+#
+# Definition of “files to exclude from automatic WIP backups” in .gitignore format.
+# autosave.sh reads this as a `core.excludesFile`.
+#
+# Location: .devcontainer/autosave.ignore
+#
+# Note:
+#   - This does not apply to tracked files (files already under Git control). It applies only to untracked files.
+#   - Please add or remove entries as needed for your project.
+#     (Example: If you place source files in `build/` or `dist/`, delete the corresponding lines.)
+#   - This file can also be used as-is as a template for `.gitignore`.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Confidential Information and Environment Variables
+# -----------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+!.env.sample
+!.env.template
+!*.env.example
+.envrc
+.dev.vars
+.direnv/
+
+# 認証情報・トークン
+.netrc
+_netrc
+.pypirc
+.git-credentials
+.vault_pass
+.vault-pass
+.htpasswd
+secrets.*
+*.secret
+*.secrets
+credentials.json
+service-account*.json
+serviceAccount*.json
+client_secret*.json
+*-credentials.json
+.aws/
+.azure/
+.gcloud/
+.config/gcloud/
+.kube/config
+kubeconfig
+.docker/config.json
+.terraformrc
+
+# Private Keys, Certificates, and Keystores
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.pkcs12
+*.gpg
+*.pgp
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+.ssh/
+secring.*
+*.mobileprovision
+*.p8
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+
+# -----------------------------------------------------------------------------
+# Node.js / JavaScript / TypeScript
+# -----------------------------------------------------------------------------
+node_modules/
+jspm_packages/
+bower_components/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+.pnp.*
+.pnpm-store/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Building and Caching Front-End Frameworks
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.angular/
+.astro/
+.vite/
+.turbo/
+.parcel-cache/
+.cache/
+.docusaurus/
+.expo/
+.vercel/
+.netlify/
+storybook-static/
+.rpt2_cache/
+
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.eggs/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+.pdm-python
+.pdm-build/
+__pypackages__/
+.python-version.local
+
+
+# -----------------------------------------------------------------------------
+# Rust
+# -----------------------------------------------------------------------------
+target/
+
+
+# -----------------------------------------------------------------------------
+# Go
+# -----------------------------------------------------------------------------
+vendor/
+*.test
+*.out
+
+
+# -----------------------------------------------------------------------------
+# Java / Kotlin / Scala / Gradle / Maven
+# -----------------------------------------------------------------------------
+.gradle/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+.mvn/repository/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.bsp/
+.metals/
+.bloop/
+.sbt/
+local.properties
+
+
+# -----------------------------------------------------------------------------
+# .NET / C#
+# -----------------------------------------------------------------------------
+obj/
+bin/Debug/
+bin/Release/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+.vs/
+packages/
+*.nupkg
+TestResults/
+
+
+# -----------------------------------------------------------------------------
+# Ruby
+# -----------------------------------------------------------------------------
+.bundle/
+vendor/bundle/
+.gem/
+*.gem
+.rvm/
+.byebug_history
+
+
+# -----------------------------------------------------------------------------
+# PHP
+# -----------------------------------------------------------------------------
+/vendor/
+.phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+
+
+# -----------------------------------------------------------------------------
+# Elixir / Erlang
+# -----------------------------------------------------------------------------
+_build/
+deps/
+.elixir_ls/
+*.beam
+
+
+# -----------------------------------------------------------------------------
+# Dart / Flutter
+# -----------------------------------------------------------------------------
+.dart_tool/
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+
+# -----------------------------------------------------------------------------
+# Swift / iOS / macOS
+# -----------------------------------------------------------------------------
+DerivedData/
+.build/
+Pods/
+Carthage/Build/
+xcuserdata/
+*.xcuserstate
+
+
+# -----------------------------------------------------------------------------
+# C / C++
+# -----------------------------------------------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+.ccls-cache/
+compile_commands.json
+
+
+# -----------------------------------------------------------------------------
+# R / Julia / Other Data Science
+# -----------------------------------------------------------------------------
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+.julia/
+
+
+# -----------------------------------------------------------------------------
+# General-Purpose Build Artifacts, Cache, and Coverage
+# -----------------------------------------------------------------------------
+dist/
+coverage/
+.nyc_output/
+*.log
+logs/
+tmp/
+temp/
+.tmp/
+*.tmp
+*.swp
+*.swo
+*~
+
+
+# -----------------------------------------------------------------------------
+# Containers / Local Environment
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+.devcontainer/*.local.*
+*.local
+
+
+# -----------------------------------------------------------------------------
+# OS / Editor
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Trash-*
+.vscode-server/
+.vscode-test/

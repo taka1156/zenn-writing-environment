@@ -4,10 +4,15 @@
   "service": "study_room",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yaml",
-  "postCreateCommand": "yarn install",
+  "containerEnv": {
+    "AUTOSAVE_INTERVAL": "300",
+    "AUTOSAVE_EXCLUDE_FILE": ".devcontainer/autosave.ignore"
+  },
+  "postStartCommand": "yarn install && nohup bash .devcontainer/autosave.sh \"$PWD\" >/tmp/autosave.log 2>&1",
   "customizations": {
     "vscode": {
       "settings": {
+        "task.allowAutomaticTasks": "on",
         "terminal.integrated.defaultProfile.linux": "bash",
         "editor.formatOnSave": true,
         "github.copilot.enable": {
@@ -28,7 +33,7 @@
         "username.errorlens",
         "davidanson.vscode-markdownlint",
         "yzhang.markdown-all-in-one",
-        "zenn.zenn-preview"
+        "zenn.zenn-preview",
       ]
     }
   }
