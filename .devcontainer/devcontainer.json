@@ -33,7 +33,6 @@
         "username.errorlens",
         "davidanson.vscode-markdownlint",
         "yzhang.markdown-all-in-one",
-        "zenn.zenn-preview",
       ]
     }
   }

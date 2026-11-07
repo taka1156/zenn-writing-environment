@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:26-slim
 
 WORKDIR /workspace
 
@@ -8,17 +8,20 @@ ENV LANG=ja_JP.UTF-8 \
   TZ=Asia/Tokyo
 
 RUN <<-EOF
-apk add --no-cache \
-  bash \
-  bash-completion \
-  ca-certificates \
-  tzdata \
-  git \
-  git-lfs \
-  vim \
-  curl \
-  musl-locales \
-  musl-locales-lang
+apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    bash \
+    bash-completion \
+    ca-certificates \
+    tzdata \
+    git \
+    git-lfs \
+    vim \
+    curl \
+    locales \
+  && echo "ja_JP.UTF-8 UTF-8" >> /etc/locale.gen \
+  && locale-gen \
+  && rm -rf /var/lib/apt/lists/*
 EOF
 
 RUN git lfs install
