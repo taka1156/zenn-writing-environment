@@ -1,6 +1,0 @@
-services:
-    study_room:
-      build: .
-      tty: true
-      volumes:
-        - ../:/workspace
