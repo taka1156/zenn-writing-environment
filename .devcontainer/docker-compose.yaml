@@ -1,5 +1,5 @@
 services:
-    study_room:
+    app:
       build: .
       tty: true
       volumes:

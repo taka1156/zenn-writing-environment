@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM ubuntu:26.04
 
 WORKDIR /workspace
 
@@ -8,7 +8,8 @@ ENV LANG=ja_JP.UTF-8 \
   TZ=Asia/Tokyo
 
 RUN <<-EOF
-apk add --no-cache \
+apt update
+apt install -y --no-install-recommends \
   bash \
   bash-completion \
   ca-certificates \
@@ -17,15 +18,18 @@ apk add --no-cache \
   git-lfs \
   vim \
   curl \
-  musl-locales \
-  musl-locales-lang
+  locales \
+  libatomic1
+rm -rf /var/lib/apt/lists/*
+locale-gen ja_JP.UTF-8
+update-locale LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8
 EOF
 
 RUN git lfs install
 
 RUN <<-EOF
-ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-echo "Asia/Tokyo" > /etc/timezone
+ln -fs /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+dpkg-reconfigure -f noninteractive tzdata
 EOF
 
 RUN <<-EOF
@@ -41,6 +45,6 @@ git config --system --add safe.directory /workspace
 echo 'export PS1="\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \[\033[01;31m\]\$(__git_ps1 \"(%s)\") \\n+\[\033[01;34m\]\\$ \[\033[00m\]"' >> ~/.bashrc
 EOF
 
-RUN yarn global add zenn-cli
+RUN curl -fsSL https://vite.plus | bash || { find / -path '*vite-plus*' -name upgrade.log -exec cat {} + 2>/dev/null; exit 1; }; BIN="$(ls -d "$HOME/.vite-plus/bin" "$HOME/.local/share/vite-plus/bin" 2>/dev/null | head -n1)"; [ -n "$BIN" ] || { echo 'vp bin dir not found'; exit 1; }; for f in "$BIN"/*; do ln -sf "$f" "/usr/local/bin/$(basename "$f")"; done; vp --version
 
 CMD ["bash"]

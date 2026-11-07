@@ -1,26 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/configuration-editing/schemas/devContainer.vscode.schema.json",
   "name": "zenn-writing-environment",
-  "service": "study_room",
+  "service": "app",
   "workspaceFolder": "/workspace",
   "dockerComposeFile": "docker-compose.yaml",
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "pnpm install", 
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "editor.formatOnSave": true,
-        "github.copilot.enable": {
-          "*": false
-        },
-        "chat.disableAIFeatures": false,
-        "[markdown]": {
-          "editor.quickSuggestions": {
-            "other": "on",
-            "comments": "off",
-            "strings": "off"
-          }
-        }
+        "terminal.integrated.defaultProfile.linux": "bash"
       },
       "extensions": [
         "MS-CEINTL.vscode-language-pack-ja",
@@ -28,7 +16,6 @@
         "username.errorlens",
         "davidanson.vscode-markdownlint",
         "yzhang.markdown-all-in-one",
-        "zenn.zenn-preview"
       ]
     }
   }
