@@ -167,8 +167,8 @@ importers:
   .:
     devDependencies:
       '@textlint/textlint-plugin-markdown':
-        specifier: ^15.5.4
-        version: 15.8.0(supports-color@10.2.2)
+        specifier: ^16.0.0
+        version: 16.1.2
       husky:
         specifier: ^9.1.7
         version: 9.1.7
