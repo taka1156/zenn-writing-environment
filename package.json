@@ -9,7 +9,7 @@
     "pv": "zenn preview"
   },
   "devDependencies": {
-    "@textlint/textlint-plugin-markdown": "^15.5.4",
+    "@textlint/textlint-plugin-markdown": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "markdownlint-cli": "^0.48.0",
