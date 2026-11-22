@@ -195,7 +195,7 @@ importers:
         version: 5.0.0(textlint@15.8.0(supports-color@10.2.2))
       zenn-cli:
         specifier: ^0.5.14
-        version: 0.5.14(supports-color@10.2.2)
+        version: 0.5.15(supports-color@10.2.2)
 
 packages:
 
@@ -482,6 +482,7 @@ packages:
   '@secretlint/secretlint-rule-preset-recommend@13.1.0':
     resolution: {integrity: sha512-dPnplMyjJYpVCJDNTjpUA8c/AfoHbWANJJJWKroK50DGGhAB4Oumzk+XinBMyMMAwgOsjU9CB9lUHXDvObMVCg==}
     engines: {node: '>=22.0.0'}
+    deprecated: Built into secretlint v14 and later. Remove this package; the rule id still works. https://github.com/secretlint/secretlint/blob/HEAD/docs/rules/preset-recommend.md
 
   '@secretlint/source-creator@13.1.0':
     resolution: {integrity: sha512-XTix5etCEZmF88YPQdmGP9n9Z2h/ESvVJ/Ueel7XcCQrjPXtZVXKaiHpcSUClK0Qdth1UQg7Bd2oZfXZJjozgA==}
@@ -3048,13 +3049,13 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
-  zenn-cli@0.5.14:
-    resolution: {integrity: sha512-843/88s2fU8A/6mJjHEp3fZVMpcXcoIsmlJc+TjXv8f9/CMH/luGdl0kBuLSh4q3U6kx9JQiwk3LBJBZbNZtPw==}
+  zenn-cli@0.5.15:
+    resolution: {integrity: sha512-cSNtFx/b9o2gEh9QxGT3m+qKLd431tzPvio3/IsIRMis6Y0OhkKo2xFIizZjZ7qxpSOuxNGoEuqdFdgO8BJcFQ==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
-  zenn-markdown-html@0.5.14:
-    resolution: {integrity: sha512-ew6BpUTdcXucjgZTPYRkGJM4rJJfzFFUQcQ+HLIXNVHO4x9zAKshFlOvUG7ANw1hiGCkagkTI3SJm5h7hTvTdA==}
+  zenn-markdown-html@0.5.15:
+    resolution: {integrity: sha512-2k1SMYdUtrMJhkPeYezSUtqNjcmsEFJUKCwwzM85ohUWpvbCnkxNrp2Wa/wAh+BmsIK+SUdKwGAoq5zFmFvxmg==}
     engines: {node: '>=22.12.0'}
 
   zlibjs@0.3.1:
@@ -3858,7 +3859,7 @@ snapshots:
 
   '@types/hast@3.0.5':
     dependencies:
-      '@types/unist': 2.0.11
+      '@types/unist': 3.0.3
 
   '@types/katex@0.16.8': {}
 
@@ -6717,7 +6718,7 @@ snapshots:
 
   yaml@2.9.1: {}
 
-  zenn-cli@0.5.14(supports-color@10.2.2):
+  zenn-cli@0.5.15(supports-color@10.2.2):
     dependencies:
       '@ai-sdk/amazon-bedrock': 5.0.133(zod@4.6.7)
       '@ai-sdk/anthropic': 4.0.97(zod@4.6.7)
@@ -6745,7 +6746,7 @@ snapshots:
       open: 11.0.4
       package-manager-detector: 1.9.0
       ws: 8.22.1
-      zenn-markdown-html: 0.5.14
+      zenn-markdown-html: 0.5.15
       zod: 4.6.7
     transitivePeerDependencies:
       - '@types/markdown-it'
@@ -6753,7 +6754,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  zenn-markdown-html@0.5.14:
+  zenn-markdown-html@0.5.15:
     dependencies:
       cheerio: 1.2.0
       markdown-it: 15.0.3
