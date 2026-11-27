@@ -204,7 +204,7 @@ importers:
         version: 5.0.0(textlint@16.1.2(supports-color@10.2.2))
       zenn-cli:
         specifier: ^0.5.14
-        version: 0.5.15(supports-color@10.2.2)
+        version: 0.5.16(supports-color@10.2.2)
 
 packages:
 
@@ -447,6 +447,11 @@ packages:
   '@kvs/types@2.2.2':
     resolution: {integrity: sha512-5lmBuah+wOdypBf0O9t6BoHrnq5hX5MlhEPTDPBNKN38ayQwVc5gYgJOBR3Dg4EF7OwL+1c7JNtWXQEJXXVXlg==}
 
+  '@mediabunny/aac-encoder@1.66.4':
+    resolution: {integrity: sha512-OlP9dwlc3me0/fTBwnjvZqOgKTrpbgiMzMQgU2a8zAFDYaJJmwYx+FRalHc+iQdIpssv+w3+2TWChaqBymfW9w==}
+    peerDependencies:
+      mediabunny: ^1.0.0
+
   '@modelcontextprotocol/core@2.4.0':
     resolution: {integrity: sha512-z8QBKqdfXLPzkLQuG4xp8hrVEMm1PZ1IgxMN2sMbJiFiAKOWXnAzogXn2W4aqIBlP1ea6U5yiqVquvUNM1Cj6Q==}
     engines: {node: '>=20'}
@@ -682,6 +687,12 @@ packages:
 
   '@types/debug@4.1.13':
     resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
+
+  '@types/dom-mediacapture-transform@0.1.12':
+    resolution: {integrity: sha512-d7/QsLRwF864A5mgIM/YrfiglHoYn7zgCcAoJgW404r+2DwnNr7EBbLnCWpmOMgH8y0te73L1AV6H1bmauaWFw==}
+
+  '@types/dom-webcodecs@0.1.13':
+    resolution: {integrity: sha512-O5hkiFIcjjszPIYyUSyvScyvrBoV3NOEEZx/pMlsu44TKzWNkLVBBxnxJz42in5n3QIolYOcBYFCPZZ0h8SkwQ==}
 
   '@types/hast@3.0.5':
     resolution: {integrity: sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==}
@@ -950,10 +961,6 @@ packages:
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
-
-  commander@14.0.3:
-    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
-    engines: {node: '>=20'}
 
   commander@15.0.0:
     resolution: {integrity: sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg==}
@@ -1870,6 +1877,9 @@ packages:
     resolution: {integrity: sha512-yz3xRaG20c6/BOzvYoDaGtPmGscs7YivItZEEqe6GbwNfHuxu9YNmvnEkMzKldAGY4/80pRcQRZSEnhquk9XuQ==}
     engines: {node: '>= 0.8'}
 
+  mediabunny@1.66.4:
+    resolution: {integrity: sha512-VIPwwaVpY5mUnf9mAOJlBii4P1nHK05X8//veRjJrddn514BSOuYaMrUy1UReLMVVsm85id6eMu0z5K71Kkf+g==}
+
   merge-descriptors@2.0.0:
     resolution: {integrity: sha512-Snk314V5ayFLhp3fkUREub6WtjBfPdCPY1Ln8/8munuLuiYhsABgBVWsozAG+MWMbVEvcdcpbi9R7ww22l9Q3g==}
     engines: {node: '>=18'}
@@ -2319,9 +2329,6 @@ packages:
   raw-body@3.0.2:
     resolution: {integrity: sha512-K5zQjDllxWkf7Z5xJdV0/B0WTNqx6vxG70zJE4N0kBs4LovmEYWJzQGxC9bS9RAKu3bgM40lrd5zoLJ12MQ5BA==}
     engines: {node: '>= 0.10'}
-
-  rc-config-loader@4.1.4:
-    resolution: {integrity: sha512-3GiwEzklkbXTDp52UR5nT8iXgYAx1V9ZG/kDZT7p60u2GCv2XTwQq4NzinMoMpNtXhmt3WkhYXcj6HH8HdwCEQ==}
 
   rc-config-loader@4.2.0:
     resolution: {integrity: sha512-PoQabZw5RBxSW9jJhI1WJ8hpLYCjF4PrkhqkkjXYKRpWTo1cn3ovdXku2spdS79dnD3pT/axXeEUnwbG8qxz9A==}
@@ -2924,13 +2931,13 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
-  zenn-cli@0.5.15:
-    resolution: {integrity: sha512-cSNtFx/b9o2gEh9QxGT3m+qKLd431tzPvio3/IsIRMis6Y0OhkKo2xFIizZjZ7qxpSOuxNGoEuqdFdgO8BJcFQ==}
+  zenn-cli@0.5.16:
+    resolution: {integrity: sha512-2BtTi46yLr5s6aczxk2Ul7Guc6tlc9u8Wtxe54V1oOAUWcSRMS7CamhUopUpIBn+xzR6s7J+6Mhil0OwEbQoFA==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
-  zenn-markdown-html@0.5.15:
-    resolution: {integrity: sha512-2k1SMYdUtrMJhkPeYezSUtqNjcmsEFJUKCwwzM85ohUWpvbCnkxNrp2Wa/wAh+BmsIK+SUdKwGAoq5zFmFvxmg==}
+  zenn-markdown-html@0.5.16:
+    resolution: {integrity: sha512-CmCZZ9na8rjAOlFXWse88CQ+64EQQjs35CBhv/yc+GAUFIYxcyrwzf62SR5AdBQFJ/SjwY6aevpv+PvQsNoExw==}
     engines: {node: '>=22.12.0'}
 
   zlibjs@0.3.1:
@@ -3345,6 +3352,10 @@ snapshots:
 
   '@kvs/types@2.2.2': {}
 
+  '@mediabunny/aac-encoder@1.66.4(mediabunny@1.66.4)':
+    dependencies:
+      mediabunny: 1.66.4
+
   '@modelcontextprotocol/core@2.4.0':
     dependencies:
       zod: 4.6.7
@@ -3366,7 +3377,7 @@ snapshots:
       '@secretlint/types': 13.1.0
       ajv: 8.20.0
       debug: 4.4.3(supports-color@10.2.2)
-      rc-config-loader: 4.1.4(supports-color@10.2.2)
+      rc-config-loader: 4.2.0(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -3726,6 +3737,12 @@ snapshots:
     dependencies:
       '@types/ms': 2.1.0
 
+  '@types/dom-mediacapture-transform@0.1.12':
+    dependencies:
+      '@types/dom-webcodecs': 0.1.13
+
+  '@types/dom-webcodecs@0.1.13': {}
+
   '@types/hast@3.0.5':
     dependencies:
       '@types/unist': 3.0.3
@@ -4000,8 +4017,6 @@ snapshots:
   comma-separated-tokens@1.0.8: {}
 
   comma-separated-tokens@2.0.3: {}
-
-  commander@14.0.3: {}
 
   commander@15.0.0: {}
 
@@ -5078,6 +5093,11 @@ snapshots:
 
   media-typer@1.1.1: {}
 
+  mediabunny@1.66.4:
+    dependencies:
+      '@types/dom-mediacapture-transform': 0.1.12
+      '@types/dom-webcodecs': 0.1.13
+
   merge-descriptors@2.0.0: {}
 
   micromark-core-commonmark@2.0.4:
@@ -5532,15 +5552,6 @@ snapshots:
       http-errors: 2.0.1
       iconv-lite: 0.7.3
       unpipe: 1.0.0
-
-  rc-config-loader@4.1.4(supports-color@10.2.2):
-    dependencies:
-      debug: 4.4.3(supports-color@10.2.2)
-      js-yaml: 4.3.2
-      json5: 2.2.3
-      require-from-string: 2.0.2
-    transitivePeerDependencies:
-      - supports-color
 
   rc-config-loader@4.2.0(supports-color@10.2.2):
     dependencies:
@@ -6427,7 +6438,7 @@ snapshots:
   yaml@2.9.1:
     optional: true
 
-  zenn-cli@0.5.15(supports-color@10.2.2):
+  zenn-cli@0.5.16(supports-color@10.2.2):
     dependencies:
       '@ai-sdk/amazon-bedrock': 5.0.133(zod@4.6.7)
       '@ai-sdk/anthropic': 4.0.97(zod@4.6.7)
@@ -6437,6 +6448,7 @@ snapshots:
       '@ai-sdk/openai': 4.0.109(zod@4.6.7)
       '@aws-sdk/credential-providers': 3.1163.0
       '@azure/identity': 4.14.1(supports-color@10.2.2)
+      '@mediabunny/aac-encoder': 1.66.4(mediabunny@1.66.4)
       '@openrouter/ai-sdk-provider': 3.1.0(ai@7.0.163(zod@4.6.7))(zod@4.6.7)
       '@secretlint/node': 13.1.0(supports-color@10.2.2)
       '@secretlint/secretlint-rule-preset-recommend': 13.1.0
@@ -6451,11 +6463,12 @@ snapshots:
       fs-extra: 11.4.1
       image-size: 2.0.4
       js-yaml: 5.5.0
+      mediabunny: 1.66.4
       node-fetch: 3.3.2
       open: 11.0.4
       package-manager-detector: 1.9.0
       ws: 8.22.1
-      zenn-markdown-html: 0.5.15
+      zenn-markdown-html: 0.5.16
       zod: 4.6.7
     transitivePeerDependencies:
       - '@types/markdown-it'
@@ -6463,7 +6476,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  zenn-markdown-html@0.5.15:
+  zenn-markdown-html@0.5.16:
     dependencies:
       cheerio: 1.2.0
       markdown-it: 15.0.3
