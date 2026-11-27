@@ -20,7 +20,7 @@
       "matchUpdateTypes": ["patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
-      "automergeType": "draft"
+      "automergeType": "branch"
     }
   ]
 }
